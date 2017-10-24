@@ -69,9 +69,6 @@ class CameraSimulation(PannableSimulation):
         transformed = self.rotate_transform(self.location[0], self.location[1], rotation=self.orientation);
         x, y = self.location;
         s = self.view_size / 2 * math.sqrt(2);
-        outer_bounds = [(x - s, y - s), (x + s, y - s), (x + s, y + s), (x - s, y + s)];
-        outer_xs = map(lambda x: x[0], outer_bounds);
-        outer_ys = map(lambda x: x[1], outer_bounds);
         low_i = max(0, int(math.floor(float(x - s) / CameraSimulation.CELL_SIZE)));
         high_i = min(int(math.ceil(float(x + s) / CameraSimulation.CELL_SIZE)), self.grid_width - 1);
         low_j = max(0, int(math.floor(float(y - s) / CameraSimulation.CELL_SIZE)));
