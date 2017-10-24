@@ -1,4 +1,4 @@
 [submodule "MCL"]
-	path = MCL
+	path = mcl
 	url = https://github.com/ewadkins/MCL
 	branch = master
