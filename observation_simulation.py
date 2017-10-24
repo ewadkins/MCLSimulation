@@ -1,20 +1,8 @@
 import math
-import itertools
-import Tkinter as tk
-from Tkinter import *
-from PIL import Image
-import cv2
-from pyscreenshot import grab
-import os
-import sys
-from locationencodingmodel import *
-import time
-import numpy as np
-from mcl import MCL
-from sklearn import mixture
 
 from simulation import Simulation
 from camera_simulation import CameraSimulation
+from locationencodingmodel import *
     
 class ObservationSimulation(CameraSimulation):
     

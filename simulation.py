@@ -1,17 +1,10 @@
-import math
-import itertools
-import Tkinter as tk
 from Tkinter import *
-from PIL import Image
+import math
+import numpy as np
+import itertools
 import cv2
 from pyscreenshot import grab
-import os
-import sys
-from locationencodingmodel import *
 import time
-import numpy as np
-from mcl import MCL
-from sklearn import mixture
 
 class Simulation:
     
@@ -160,7 +153,6 @@ class Simulation:
             img = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2BGR);
             if self.video is None:
                 height, width, _ = np.shape(img);
-                print width, height
                 self.video = cv2.VideoWriter('video' + str(int(time.time())) + '.mp4', -1, 20, (width, height), True);
             self.video.write(img);
     
